@@ -1,0 +1,105 @@
+.sub{
+    width:100%;
+    margin-top:50px;
+    padding:100px 50px;
+    position: relative;
+    border-bottom:1px solid #ddd;
+
+    h2{
+        font-size:55px;
+        color:#111;
+        text-align: center;
+        font-weight:bold;
+    }
+    span{
+        color:#9c9c9c;
+        font-size:16px;
+        text-align: center;
+        display: block;
+        margin-top:20px;
+        margin-bottom:50px;
+    }
+    &__input{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        input{
+            width: 400px;
+            height:50px;
+            border:1px solid rgba(0,0,0,0.1);
+            outline:none;
+            border-radius:30px;
+            padding:10px 60px 10px 20px;
+            transition:border 0.2s;
+            font-size:16px;
+            &::placeholder{
+                color:#9c9c9c;
+                
+            }
+            &:focus{
+                border: 1px solid rgba(0,0,0,0.5)
+            }
+        }
+        
+        
+    }
+}
+.btn-sub{
+    background: linear-gradient(to bottom, #d90746,#e83730);
+    width:148px;
+    height:50px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    line-height:50px;
+    margin-left:-50px;
+    font-size: 16px;
+    color:white;
+    cursor: pointer;
+}
+@media screen and (max-width:999px) {
+    .sub{
+        margin-top:0px;
+    }
+}
+@media screen and(max-width:899px) {
+    .sub{
+        padding:50px;
+        h2{
+            font-size: 50px;
+        }
+    }
+}
+@media screen and (max-width:749px) {
+    .sub{
+        h2{
+            font-size:40px;
+        }
+    }
+}
+@media screen and(max-width:599px) {
+    .sub span{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:399px) {
+    .sub {
+        padding: 20px;
+    }
+    .sub__input input{
+        width:auto;
+        height:40px;
+    }
+    .btn-sub{
+        width:auto;
+        height:40px;
+        padding:0px 10px;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    font-size: 16px;
+    }
+}

@@ -1,0 +1,104 @@
+.person{
+    width:100%;
+    padding: 100px 50px;
+    background-color: #fff;
+    h2{
+        display: block;
+        text-align: center;
+        font-size: 55px;
+        color:#111;
+        font-weight:bold;
+    }
+    &__infor{
+        margin-top:100px;
+        display: flex;
+        justify-content: space-between  ;
+
+        &--one{
+            flex-basis: 31%;
+            display: flex;
+            flex-direction: column;
+            &-desc{
+                display: flex;
+                flex-direction: column;
+                border:1px solid rgb(241, 241, 241);
+                position: relative;
+                padding:20px;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.05),
+                            -3px 0px 10px rgba(0,0,0,0.05);
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom:-20px;
+                    
+                    border-top: 10px solid #fff;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+                span{
+                    font-size:16px;
+                    color:#808080;
+                    font-style:italic;
+                    line-height: 30px;
+                }
+                address{
+                    color:#e01d3c;
+                    font-size: 16px;
+                    font-weight:bold;
+                }
+            }
+            &-name{
+                display: flex;
+                margin-top:30px;
+                align-items: center;
+                background:#fff;
+
+                img{
+                    border-radius:50%;
+                    width: 65px;
+                    height:65px;
+                }
+                span{
+                    color: #363636;
+                    font-size:16px;
+                    padding-left:10px;
+
+                    em{
+                        color:#808a99;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:999px) {
+    .person{
+        padding:50px;
+    }
+    .person__infor--one-desc span{
+        display:-webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        hyphens: auto;
+    }
+    .person__infor--one-desc address{
+        margin-top:10px;
+    }
+}
+@media screen and(max-width:899px) {
+    .person__infor {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:599px) {
+    .person__infor {
+        flex-wrap: wrap;
+        .person__infor--one, .person__infor--two, .person__infor--three{
+            flex-basis:100%;
+            margin-top:20px;
+        }
+    }
+}
